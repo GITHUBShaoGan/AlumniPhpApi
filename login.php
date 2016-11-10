@@ -64,7 +64,7 @@ $stmt->bindValue(4, $uid);
 $stmt->execute();
 $data = array();
 $time = time();
-$key = "example_key";
+$key = md5($result["uid"]);
 $token = array(
     "uid" => $result["uid"],
     "iat" => $time,
